@@ -1,0 +1,73 @@
+POST http://localhost:8080/people
+Content-Type: application/json
+
+{
+  "firstName": "Tom",
+  "lastName": "Test",
+  "birthday": "1978-05-04",
+  "gender": "male"
+}
+
+###
+
+POST http://localhost:8080/people
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Boss",
+  "birthday": "1982-08-22",
+  "gender": "female"
+}
+
+###
+
+GET http://localhost:8080/people
+
+###
+
+POST http://localhost:8080/workshops
+Content-Type: application/json
+
+{
+  "title": "My Workshop",
+  "begin": "08:30",
+  "end": "16:30",
+  "firstDay": "2020-02-02",
+  "lastDay": "2020-02-06"
+}
+
+###
+
+GET http://localhost:8080/workshops
+
+###
+
+GET http://localhost:8080/workshops/1
+
+###
+
+GET http://localhost:8080/workshops/1/participants
+
+###
+
+POST http://localhost:8080/workshops/1/participants
+Content-Type: application/json
+
+{
+  "id": 77,
+  "firstName": "Bob",
+  "lastName": "Bane",
+  "birthday": "1971-08-25",
+  "gender": "male"
+}
+
+###
+
+PUT http://localhost:8080/workshops/1/participants/1,2,3
+
+###
+
+DELETE http://localhost:8080/workshops/1/participants/3
+
+###

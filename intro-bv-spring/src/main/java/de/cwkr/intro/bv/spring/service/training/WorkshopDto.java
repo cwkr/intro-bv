@@ -3,6 +3,8 @@ package de.cwkr.intro.bv.spring.service.training;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import de.cwkr.intro.bv.spring.domain.training.TopicRepository;
+import de.cwkr.intro.bv.spring.validation.constraints.ExistingId;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import javax.validation.constraints.NotBlank;
@@ -30,4 +32,7 @@ public class WorkshopDto {
     @NotNull
     private LocalDate firstDay;
     private LocalDate lastDay;
+    @NotNull
+    @ExistingId(repository = TopicRepository.class)
+    private Long topicId;
 }

@@ -84,8 +84,8 @@ public class WorkshopServiceController {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping(path = "workshops/{workshopId:\\d+}/participants/{id:\\d+}")
-    public void deleteParticipantById(@PathVariable("workshopId") Long workshopId, @PathVariable("id") Long id) {
-        workshopService.deleteParticipantById(workshopId, id);
+    @DeleteMapping(path = "workshops/{workshopId:\\d+}/participants/{ids}")
+    public void deleteParticipantById(@PathVariable("workshopId") Long workshopId, @PathVariable("ids") Set<Long> ids) {
+        workshopService.deleteParticipantIds(workshopId, ids);
     }
 }

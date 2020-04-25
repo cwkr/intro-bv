@@ -34,7 +34,8 @@ Content-Type: application/json
   "begin": "08:30",
   "end": "16:30",
   "firstDay": "2020-02-02",
-  "lastDay": "2020-02-06"
+  "lastDay": "2020-02-06",
+  "topicId": 1
 }
 
 ###

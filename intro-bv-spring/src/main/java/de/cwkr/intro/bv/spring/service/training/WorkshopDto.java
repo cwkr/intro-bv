@@ -3,6 +3,7 @@ package de.cwkr.intro.bv.spring.service.training;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import de.cwkr.intro.bv.constraints.DatePropertyAfter;
 import de.cwkr.intro.bv.spring.domain.training.TopicRepository;
 import de.cwkr.intro.bv.spring.validation.constraints.ExistingId;
 import java.time.LocalDate;
@@ -18,6 +19,7 @@ import lombok.NoArgsConstructor;
 @Builder(setterPrefix = "with")
 @NoArgsConstructor
 @AllArgsConstructor
+@DatePropertyAfter(beforeProperty = "firstDay", afterProperty = "lastDay")
 public class WorkshopDto {
     private Long id;
     @NotBlank

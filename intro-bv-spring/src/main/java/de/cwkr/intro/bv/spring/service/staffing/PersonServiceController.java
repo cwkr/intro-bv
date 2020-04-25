@@ -1,6 +1,7 @@
 package de.cwkr.intro.bv.spring.service.staffing;
 
 import de.cwkr.intro.bv.spring.service.training.ParticipantDto;
+import io.swagger.annotations.Api;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -25,6 +26,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+@Api(tags = "PersonService")
 @RestController
 public class PersonServiceController {
     private final PersonService personService;

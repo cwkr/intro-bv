@@ -1,10 +1,10 @@
-package de.cwkr.intro.bv.spring.service.training;
+package de.cwkr.intro.bv.spring.service.common;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import de.cwkr.intro.bv.spring.service.common.Gender;
-import java.time.LocalDate;
+import de.cwkr.intro.bv.constraints.Postleitzahl;
+import de.cwkr.intro.bv.groups.Germany;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,16 +14,15 @@ import lombok.NoArgsConstructor;
 @Builder(setterPrefix = "with")
 @NoArgsConstructor
 @AllArgsConstructor
-public class ParticipantDto {
-    private Long id;
+public class AddressDto {
     @NotBlank
     @JsonProperty(required = true)
-    private String firstName;
+    private String street;
     @NotBlank
     @JsonProperty(required = true)
-    private String lastName;
-    @NotNull
-    private LocalDate birthday;
-    @NotNull
-    private Gender gender;
+    private String city;
+    @NotBlank
+    @Postleitzahl(groups = Germany.class)
+    @JsonProperty(required = true)
+    private String postalCode;
 }

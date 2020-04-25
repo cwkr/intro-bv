@@ -25,7 +25,7 @@ public class TopicRepositoryImpl implements TopicRepository {
         topics.put(
             150L,
             Topic.builder()
-                    .withId(110L)
+                    .withId(150L)
                     .withDescription("Workshop 150")
                     .withActive(Boolean.TRUE)
                     .build()

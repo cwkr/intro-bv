@@ -51,7 +51,7 @@ Validator validator = factory.getValidator();
 - `@ReportAsSingleViolation`
 - `javax.validation.ConstraintValidator`
 - `javax.validation.ConstraintValidatorContext`
-- Add-hoc validation mit `javax.validation.constraints.AssertTrue`
+- Ad-hoc validation mit `javax.validation.constraints.AssertTrue`
 
 ## Spring integration
 
